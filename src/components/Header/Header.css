@@ -1,0 +1,14 @@
+.intro .contain .illustration {
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  width: 220px;
+  height: auto; }
+  .intro .contain .illustration img {
+    position: relative;
+    width: 100%; }
+  .intro .contain .illustration .eyebrow, .intro .contain .illustration .eyes {
+    position: absolute;
+    left: 0px; }
+
+/*# sourceMappingURL=Header.css.map */

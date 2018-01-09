@@ -1,0 +1,45 @@
+@import "../_themes";
+
+.outro {
+	background-color:transparent;
+	bottom:40px;
+	box-shadow:none;
+
+	.contain {
+		background-color:$neutralDarker;
+		margin-bottom:80px;
+		margin-top:0px;
+
+		.illustration {
+			position:absolute;
+			top:0px;
+			right:32px;
+			width:220px;
+			height:auto;
+			padding:0px;
+			
+			img {
+				width:100%;
+				right: 0px;
+				position: relative;
+			}
+
+			.rightFoot {
+				width:50%;
+				position: absolute;
+				bottom:0px;
+				right:0px;
+				transform-origin: 10% 90%;
+				animation: tap 5s ease infinite;
+				-webkit-animation: tap 5s ease infinite;
+			}
+
+
+		}
+		h2 {
+			font-weight:300;
+			color:$neutralTertiary;
+		}
+	}
+
+}

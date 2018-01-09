@@ -1,0 +1,182 @@
+@import "../_themes"; //main styles
+
+.wrap {
+	width:100vw;
+}
+
+.card {
+	width:calc(100% - 160px);
+	height:380px;
+	position:fixed;
+	left: 50%;
+	transform: translate(-50%, 0px);
+	opacity:1;
+	z-index:9; 
+	-webkit-transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: lcubic-bezier(.17,.17,0,1); /* Safari and Chrome */
+	@include transition(0.3s);
+
+	.contain {
+		max-width: 920px;
+		margin-top:40px;
+		height:300px;
+		padding:40px;
+		width:100%;
+		position:relative;
+		left:50%;
+		top:50%;
+		transform:translate(-50%, -50%);
+		background-color:$themePrimary;
+		box-shadow: 0 0 8px rgba(0,0,0,0.12);
+		border-radius:4px;
+		overflow:hidden;
+		@include transition(0.1s);
+
+		h1 {
+			color:$white;
+			width:60%;
+			padding:0px;
+			font-weight:300;
+
+			&:first-of-type {
+				margin-bottom:28px;
+			}
+		}
+		h2 {
+			position: absolute;
+			bottom:40px;
+			left:40px;
+		}
+		a {
+			clear:both;
+			float:left;
+			margin-bottom:8px;
+		}
+		.illustration {
+			width:220px;
+			height:auto;
+			position: absolute;
+		}
+
+		.eyebrow{
+			@include transition(0.2s);
+		}
+
+		.eyebrowUp {
+			transform:translate(0, -4px);
+		}
+	}
+}
+
+@keyframes tap {
+	0% {
+		transform:rotate(0deg);
+	}
+	8% {
+		transform:rotate(-4deg);
+	}
+	12% {
+		transform:rotate(0deg);
+	}
+}
+
+@-webkit-keyframes tap {
+	0% {
+		transform:rotate(0deg);
+	}
+	8% {
+		transform:rotate(-4deg);
+	}
+	12% {
+		transform:rotate(0deg);
+	}
+}
+
+.fade {
+opacity:0;
+}
+
+.fade2 {
+display:none;
+}
+
+.dock {
+transform:translate(-50%, calc(100vh - 134px)) ;
+transition:0.8s;
+transition-delay:0s;
+z-index:10;
+}
+ 
+.loadingIntro {
+	top:120px;
+	opacity:0;
+}
+
+
+
+
+@media only screen and (max-width:800px) {
+	.portfolio {
+		width:calc(100% - 56px);
+		padding:40px 20px 20px 20px;
+		margin: 500px 0px 500px 0px;
+
+		.projectList {
+			li {
+				margin-bottom:20px;
+			}
+			.half {
+				width:calc(50% - 10px);
+			}
+			.firstHalf {
+				margin-right:20px;
+			}
+		}
+	}
+	
+	.intro, .outro{
+		width:calc(100% - 56px);
+		height:484px;
+	
+		.contain {
+			max-width: 960px;
+			margin-top:8px;	
+			height:444px;
+			padding:20px;
+
+			.illustration {
+				width:140px;
+				right:20px;
+
+				img {
+					width:100%;
+				}
+
+				.rightFoot {
+					width:50%;
+				}
+			}
+
+			h1 {
+				width:60%;
+				min-width:280px;
+
+				&:first-of-type {
+					margin-bottom:14px;
+				}
+			}
+
+			h2 {
+				left: 20px;
+				bottom:20px;
+			}
+		}
+	}
+
+	.outro {
+		.contain {
+			margin-top:32px;
+		}
+	}
+}
+

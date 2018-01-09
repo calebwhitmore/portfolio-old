@@ -1,0 +1,22 @@
+@import "../_themes";
+
+.intro {
+	.contain {
+		.illustration {
+			position:absolute;
+			bottom:0px;
+			right:40px;
+			width:220px;
+			height:auto;
+
+			img {
+				position:relative;
+				width:100%;
+			}
+			.eyebrow, .eyes {
+				position:absolute;
+				left:0px;
+			}
+		}
+	}
+}
